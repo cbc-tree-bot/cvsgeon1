@@ -15,8 +15,9 @@
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
 
  <!-- Load Esri Leaflet from CDN -->
-  <script src="https://unpkg.com/esri-leaflet@3.0.2/dist/esri-leaflet.js"></script>
-
+  <script src="https://unpkg.com/esri-leaflet@3.0.2/dist/esri-leaflet.js"
+    integrity="sha512-myckXhaJsP7Q7MZva03Tfme/MSF5a6HC2xryjAM4FxPLHGqlh5VALCbywHnzs2uPoF/4G/QVXyYDDSkp5nPfig=="
+    crossorigin=""></script>
  
   <!-- Position the map with Cascading Style Sheet (CSS) -->
   <style>
@@ -58,7 +59,12 @@ var myRenderer = L.canvas({ padding: 0.5 });
    // L.esri.tiledMapLayer("http://maps.six.nsw.gov.au/arcgis/rest/services/public/NSW_Imagery/MapServer", {}).addTo(map);
     
   // display Carto basemap tiles with light features and labels
-  L.esri.tiledMapLayer("http://maps.six.nsw.gov.au/arcgis/rest/services/public/NSW_Imagery/MapServer", {}).addTo(map);
+  
+    L.esri.tiledMapLayer({
+    url: 'http://maps.six.nsw.gov.au/arcgis/rest/services/public/NSW_Imagery/MapServer'
+  }).addTo(map);
+    
+
 
   /* Stamen colored terrain basemap tiles with labels */
 
