@@ -80,7 +80,7 @@ var myRenderer = L.canvas({ padding: 0.5 });
 
  // var map = L.map('mapContainer');
 
-  $.get('data.csv', function(csvContents) {
+  $.get('./data.csv', function(csvContents) {
     var geoLayer = L.geoCsv(csvContents, {firstLineTitles: true, fieldSeparator: ','});
     map.addLayer(geoLayer);
   });
