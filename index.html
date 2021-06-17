@@ -75,8 +75,8 @@ var myRenderer = L.canvas({ padding: 0.5 });
   // see more basemap options at https://leaflet-extras.github.io/leaflet-providers/preview/
 
     
-  (function() {
-  'use strict';
+  //(function() {
+  //'use strict';
 
  // var map = L.map('mapContainer');
 
@@ -84,7 +84,9 @@ var myRenderer = L.canvas({ padding: 0.5 });
     var geoLayer = L.geoCsv(csvContents, {firstLineTitles: true, fieldSeparator: ','});
     map.addLayer(geoLayer);
   });
-});  
+//});  
+    
+    
   
      
 
